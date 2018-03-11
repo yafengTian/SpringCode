@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="bean_post_processor" class="com.tyf.day2.HelloJava" scope="singleton" init-method="init" destroy-method="destory">
+        <property name="message" value="helloJava!"></property>
+     </bean>
+
+    <bean class="com.tyf.day2.MyBeanPostProcessor"/>
+    
+    <!--bean定义继承-->
+    <bean id="hellojava" class="com.tyf.day2.Demo1.HelloJava" init-method="init" destroy-method="destory">
+        <property name="name" value="Java"></property>
+        <property name="position" value="first"></property>
+    </bean>
+    <!--子类-->
+    <bean id="hellopython" class="com.tyf.day2.Demo1.HelloPython" init-method="init" destroy-method="destory" parent="hellojava">
+        <property name="name" value="python"></property>
+        <property name="position" value="second"></property>
+        <property name="age" value="20"></property>
+     </bean>
+</beans>
