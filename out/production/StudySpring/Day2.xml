@@ -17,7 +17,7 @@
     <!--子类-->
     <bean id="hellopython" class="com.tyf.day2.Demo1.HelloPython" init-method="init" destroy-method="destory" parent="hellojava">
         <property name="name" value="python"></property>
-
+        <property name="position" value="second"></property>
         <property name="age" value="20"></property>
      </bean>
 </beans>

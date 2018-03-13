@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--Spring自定义事件-->
+    <bean id="customEventHandler" class="com.tyf.day4.Demo9.CustomeEventHandler"></bean>
+    <bean id="customEventPublisher" class="com.tyf.day4.Demo9.CustomePublisher"></bean>
+
+    <bean id="applicationeventlistener" class="com.tyf.day4.Demo10.ApplicationEventListener"></bean>
+</beans>
